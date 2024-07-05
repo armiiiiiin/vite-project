@@ -46,15 +46,19 @@ export default function Businescard() {
 
     const onkeydownhanler = (()=>{
         
-        setdata([
-            ...data,
-            {
-                title : titleinput ,
-                number : numberinput,
-                address : addressinput,
-                website : websiteinput,
-            }
-        ])
+        if(
+            titleinput != '' &&  numberinput != '' && addressinput != '' && websiteinput != ''
+        ){
+            setdata([
+                ...data,
+                {
+                    title : titleinput ,
+                    number : numberinput,
+                    address : addressinput,
+                    website : websiteinput,
+                }
+            ])
+        }
         
 
     })

@@ -57,7 +57,12 @@ export default function Businescard() {
                     address : addressinput,
                     website : websiteinput,
                 }
-            ])
+            ]),
+
+            settitleinput ('')
+            setnumberinput ('')
+            setaddressinput ('')
+            setwebsiteinput ('')
         }
         
 
@@ -81,10 +86,10 @@ export default function Businescard() {
 
 
     <div className="flex flex-col  border w-1/4 h-screen p-5 m-5">
-        <input placeholder='Title' onChange={titleonchangehanler} className='m-1' type="text" />
-        <input placeholder='Number' onChange={numberonchangehanler} className='m-1' type="text" />
-        <input placeholder='Address' onChange={addressonchangehanler} className='m-1' type="text" />
-        <input placeholder='Website' onChange={websiteonchangehanler} className='m-1' type="text" />
+        <input value={titleinput} placeholder='Title' onChange={titleonchangehanler} className='m-1' type="text" />
+        <input value={numberinput} placeholder='Number' onChange={numberonchangehanler} className='m-1' type="text" />
+        <input value={addressinput} placeholder='Address' onChange={addressonchangehanler} className='m-1' type="text" />
+        <input value={websiteinput} placeholder='Website' onChange={websiteonchangehanler} className='m-1' type="text" />
         <button onClick={onkeydownhanler}  className='border m-2'>ADD</button>
     </div>
 

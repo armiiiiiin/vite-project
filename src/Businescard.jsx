@@ -69,7 +69,17 @@ export default function Businescard() {
     })
     
     
-    const ondeletehanler = (i)=>{console.log(i.id);}
+
+    const ondeletehanler = (i)=>{
+            let newdata = data.filter((e)=>{
+                // console.log(e.id)
+                return e.id != i.id
+            })
+
+            console.log(newdata)
+            setdata(newdata)
+    }
+
 
   return (
 

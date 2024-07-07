@@ -8,5 +8,6 @@ export default function DeleteCard({onClick}) {
 
     <button onClick={onClick} >DELETE</button>
     
+    
   )
 }

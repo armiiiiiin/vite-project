@@ -2,16 +2,16 @@ import React from 'react'
 import Delete from './DeleteCard'
 import DeleteCard from './DeleteCard'
 
-export default function ItemBusinescard({ i , ondeletehanler}) {
+export default function ItemBusinescard({ i , ondeletehanler , viphanler }) {
 
     
   return (
 
-    <div className='flex flex-col w-full'> 
+    <div className='flex flex-col w-1/3'> 
 
       <div>
 
-        <div className='flex justify-between p-2 m-2 border w-2/5 h-auto '>
+        <div className='flex justify-between p-2 m-2 border w-full h-auto '>
 
           <div className='w-2/3 uppercase'>
             <h3>id : {i.id}</h3>
@@ -32,11 +32,13 @@ export default function ItemBusinescard({ i , ondeletehanler}) {
       </div>
 
 
-      <div>
+      <div className='flex justify-between'>
         <DeleteCard  onClick={()=>{ondeletehanler(i)}} />
+        <input type="checkbox" checked={i?.vip} onChange={()=>{viphanler(i)}} />
       </div>
 
     </div>
+
 
   )
 }

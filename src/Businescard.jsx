@@ -97,12 +97,13 @@ export default function Businescard() {
         }
         return e
       })
+      console.log(newdata1)
 
       setdata(newdata1)
     }
 
 
-
+   
 
 
   return (

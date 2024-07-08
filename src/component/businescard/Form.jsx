@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import Businescard from '../../Businescard';
 
-export default function Form({onkeydownhanlerInForm}) {
+export default function Form({formhanler}) {
 
 
 
@@ -46,17 +46,30 @@ export default function Form({onkeydownhanlerInForm}) {
                     address : addressinput,
                     website : websiteinput,
                 }
-            ])
+                
 
+            ])
+            
+            console.log('sss')
+            settitleinput ('')
+            setnumberinput ('')
+            setaddressinput ('')
+            setwebsiteinput ('')
             
             
         } 
+        ()=> formhanler(inputeData)
         return inputeData
         // console.log(inputeData)
         
     })
     
     
+
+    const click = ()=> {
+        ;
+        ()=>formhanler(inputeData)
+    }
     
 
     
@@ -68,8 +81,9 @@ export default function Form({onkeydownhanlerInForm}) {
         <input value={numberinput} placeholder='Number' onChange={numberonchangehanler} className='m-1' type="text" />
         <input value={addressinput} placeholder='Address' onChange={addressonchangehanler} className='m-1' type="text" />
         <input value={websiteinput} placeholder='Website' onChange={websiteonchangehanler} className='m-1' type="text" />
-        <button onClick={oninputehanler}  className='border m-2'>ADD</button>
-        <button onClick={()=>onkeydownhanlerInForm(inputeData)}>send</button>
+        <button onClick={oninputehanler }  className='border m-2'>ADD</button>
+        {/* <button onClick={()=>formhanler(inputeData)}>send</button> */}
+        {/* <button onClick={click}  className='border m-2'>ADD</button> */}
     </div>
 
 

@@ -11,7 +11,7 @@ export default function ItemBusinescard({ i , ondeletehanler , viphanler }) {
 
       <div>
 
-        <div className='flex justify-between p-2 m-2 border w-full h-auto '>
+        <div className={`flex justify-between p-2 m-2 border w-full h-auto ${i.vip ? 'bg-orange-500' : ''}`}>
 
           <div className='w-2/3 uppercase'>
             <h3>id : {i.id}</h3>

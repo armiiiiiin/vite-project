@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function Edit() {
+export default function Edit({onClick}) {
   return (
-    <div>Edit</div>
+      <button onClick={onClick}>Edite</button>
+
   )
 }

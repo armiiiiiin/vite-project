@@ -105,6 +105,15 @@ export default function Businescard() {
 
    
 
+    const updateEdite = ((e , newtitleedite )=>{
+      let newdata3 = data.map((q)=>{
+        if(e.id === q.id){
+          q.title = newtitleedite
+        }
+        return q
+      })
+      setdata(newdata3)
+    })
 
   return (
 
@@ -115,7 +124,7 @@ export default function Businescard() {
 
 
       <div className="border w-3/4 h-auto p-5 m-5 ">
-        <ListBusinescard data={data} ondeletehanler={ondeletehanler}  viphanler={viphanler} />
+        <ListBusinescard data={data} ondeletehanler={ondeletehanler}  viphanler={viphanler} updateEdite={updateEdite} />
       </div>
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemBusinescard from './component/businescard/ItemBusinescard'
 import ListBusinescard from './component/businescard/ListBusinescard'
 import Form from './component/businescard/Form'
@@ -114,6 +114,18 @@ export default function Businescard() {
       })
       setdata(newdata3)
     })
+
+    //useEffect
+
+  // console.log('Businescard component')
+  //  useEffect(()=>{ console.log('x')} , []) 
+
+    useEffect(()=>{
+      localStorage.setItem('data_List' , JSON.stringify(data))
+    } , [data])
+
+
+    
 
   return (
 

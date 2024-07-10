@@ -2,7 +2,7 @@ import Businescard from "./Businescard";
 
 export default function App() {
 
-
+  console.log('APP')
 
   return (
 

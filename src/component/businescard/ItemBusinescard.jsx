@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Delete from './DeleteCard'
 import DeleteCard from './DeleteCard'
 import Edit from './Edit'
@@ -15,6 +15,18 @@ export default function ItemBusinescard({ i , ondeletehanler , viphanler , updat
         seteditmode(false)
       }
   })
+
+
+  //useEffect
+
+  useEffect(()=>{
+    console.log(`the item created : ${i.title}`);
+    
+    return ()=>{ console.log(`the componenr deleted : ${i.title}`)}
+
+  } , [])
+
+
 
   return (
 
